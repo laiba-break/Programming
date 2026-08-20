@@ -21,3 +21,4 @@ print("Hello, my name is {}".format(name))
 number= 3.1449
 print("the number pi is {}".format(number))
 print("the number pi is {:.3f}".format(number))
+#you can also write this in exponential or other ways

@@ -14,5 +14,5 @@ except Exception:
 else:
     print(result)
 finally:
-    print("This will alwazs execute")
-    
+    print("This will always execute")
+#before exception try to make other excepts for lowering exception
