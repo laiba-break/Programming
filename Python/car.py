@@ -1,8 +1,9 @@
-class Car:
+class Car: #class variable
+    wheels = 4 #class variable 
     def __init__(self,make,model,year,color):  #this is an inbuilt function that is used
        #when isnitalizing a class always it used to assign values 
        #without this u would manually need to add names
-       self.make = make
+       self.make = make  #instance variable
        self.model = model
        self.year= year
        self.color = color 
