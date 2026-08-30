@@ -10,4 +10,5 @@ print(b.shape[0],b.shape[1],b.shape[2]) #shape[0] tells u total no fo arrays in 
 A = np.array([2]) #you can define two array of arrays
 print(A.ndim) 
 #size
-print(b.size)
+print(b.size) #no of elements
+
