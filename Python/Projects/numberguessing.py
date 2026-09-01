@@ -73,8 +73,6 @@ def user(computer_num):
 
 
 
-
-
 #computer(value = computer_nm)
 user(computer_num=computer_nm)
 
