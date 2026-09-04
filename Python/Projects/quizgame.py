@@ -47,7 +47,7 @@ def game():
     print(dict_ans)
     print("Your Score is:" +str(score) + " out of 5")
 
-
+rules()
 game()
 
 
