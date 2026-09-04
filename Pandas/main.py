@@ -29,4 +29,5 @@ print(series)
 series.loc["Day 1"] += 500
 print(series.loc["Day 3"])
 print(series.loc["Day 1"])
-print(series[series <= 2000])
+print(series[series <= 2000]) 
+#its like a single 

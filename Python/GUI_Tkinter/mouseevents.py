@@ -12,7 +12,7 @@ window= Tk()
 # window.bind("<ButtonRelease>",doSth)
 # window.bind("<Enter>",doSth) #right mouse click
 # window.bind("<Leave>",doSth)
-window.bind("<Motion>",doSth) 
+# window.bind("<Motion>",doSth) 
 
 
 window.mainloop()
