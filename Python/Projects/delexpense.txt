@@ -1,1 +1,1 @@
-{"04:Sep:2026": {"Rent": [400.0], "Grocery": [200.0]}}
+{"06:Sept:2026": {"Rent": [300.0], "Health Insurance": [150.0]}, "05:Sep:2026": {"Grocery": [150.0], "Health Insurance": [200.0]}}

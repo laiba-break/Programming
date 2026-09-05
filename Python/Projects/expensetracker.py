@@ -19,15 +19,15 @@ from time import *
 
 
 expense_log ={}
-expenses = {} #initalized an empty dict of expenses
+ #initalized an empty dict of expenses
 #this dictionary will store the three spending categories as key and their values
 
 def stop():  #this is a function for stop
     #since it used again and again instead of copy pasting we call 
     #this is used to go main menu after each work is done
      while True:  #this keeps runnign until quit is entered
-         answer = input("Please type quit to return to Main Menu:")
-         if answer == "quit":
+        answer = input("Please type quit to return to Main Menu:")
+        if answer == "quit":
             break  #it breaks out of the code loop
 
 def save_expenses():  #this is a seperate fucnction created to save expenses added
@@ -50,74 +50,62 @@ def categ():
       print("2. Grocery")
       print("3. Health Insurance")
 
-def tim():
-    t= strftime("%d:%b:%Y")
-    expense_log ={t:expenses}
-   # print(expense_log)
 
-expenses = load_expenses()
+expense_log = load_expenses()
 while True:
-    print("Program is running...")
     print("1. Add Expense")
     print("2. View Expense")
     print("3. Total spent")
     print("4. Spending by category")
-    print("5. Update Expenses")
-    print("6. Delete Expenses")
-    print("7. Exit")
+    print("5. Exit")
     choice = input("Select an option number:")
+
 
     while choice == "1":
         categ()
         n = int(input("Enter the total number of entries: "))
+        #TEMPORARY FOR TESTING ONLY
+        #t = "06:Sept:2026"
         t= strftime("%d:%b:%Y")
-        expense_log ={t:expenses}
         for _ in range(n):
             category = input("Enter category: ")
             value = float(input("Enter value: "))
-            expenses.setdefault(category, []).append(value) #this helps update value with key
-            save_expenses()
+            expense_log.setdefault(t, {}).setdefault(category, []).append(value)
+        save_expenses()
         stop()
-        break ##laiba
-
+        break ##laiba    
     while choice == "2":
-        
+        load_expenses()
         print("Expenses Entered are:", expense_log)
         stop()
         break
+    
     while choice == "3":
-        res = dict()
-        for sub in expense_log.values():
-            for key, ele in sub.items():
-                res[key] = ele + res.get(key,0)
-        total = str(res)
-        print("Total Expenses are:", total)
-        stop()
-        break
+       # total = sum(expense_log.values()) this only we for one dict
+       # for nexted loop is required to each values
+       # date to category to value
+       total =0
+       for date_dict in expense_log.values():
+           for value_list in date_dict.values():      # loop through each category's list, within that date
+               total += sum(value_list)                # add up that list's numbers, accumulate into total
+       print("Total Expenses are:", total)
+       stop()
+       break
 
     while choice == "4":
         categ()
+        t= strftime("%d:%b:%Y")
         n = int(input("Enter your choice:"))
         if (n ==1):
-            print(expense_log["Rent"])
+            print(expense_log.get(t,{}).get("Rent")) #nested dictionary to get value
         elif (n==2):
-            print(expense_log ["Grocery"])
+            print(expense_log.get(t,{}).get("Grocery"))
         elif (n==3):
-            print(expense_log["Health Insurance"])
+            print(expense_log.get(t,{}).get("Health Insurance"))
         else:
             print("Wrong Choice")
         stop()
         break
 
-    while choice == "5":
-        print("Expenses Entered are:", expenses)
-        stop()
-        break
-    
-    while choice == "6":
-        print("Expenses Entered are:", expenses)
-        stop()
-        break
-    
-    if choice == "7":
+    if choice == "5":
         break
