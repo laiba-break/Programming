@@ -85,7 +85,7 @@ while True:
        # for nexted loop is required to each values
        # date to category to value
        total =0
-       for date_dict in expense_log.values():
+       for date_dict in expense_log.values():  #nested loop acess to get sum
            for value_list in date_dict.values():      # loop through each category's list, within that date
                total += sum(value_list)                # add up that list's numbers, accumulate into total
        print("Total Expenses are:", total)
