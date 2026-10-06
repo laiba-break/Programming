@@ -1,0 +1,155 @@
+/* ==================== RESPONSIVE ==================== */
+
+/* ---------- Tablets & small laptops ---------- */
+@media screen and (max-width: 1100px) {
+  .section {
+    padding: 4rem 5rem;
+  }
+
+  // 3 columns → 2 columns
+  .portfolios,
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // side-by-side → stacked
+  .about-container,
+  .contact-content-con {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ---------- Phones ---------- */
+@media screen and (max-width: 700px) {
+  .section {
+    padding: 3rem 1.5rem 6rem;   // extra bottom space so the nav bar doesn't cover content
+  }
+
+  // ----- Section titles: smaller -----
+  .main-title {
+    margin-bottom: 2.5rem;
+
+    h2 {
+      font-size: 2.2rem;
+
+      .bg-text {
+        font-size: 3.2rem;
+      }
+    }
+  }
+
+  // ----- Home: text on top, robot below -----
+  .header-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 4rem;
+
+    .right-header {
+      grid-row: 1;                 // move the text above the robot
+      padding-left: 0;
+      text-align: center;
+      align-items: center;
+
+      .name {
+        white-space: normal;       // allow the name to wrap on small screens
+        font-size: 2.2rem;
+      }
+
+      .tags {
+        justify-content: center;
+      }
+
+      .btn-con {
+        align-self: center;
+      }
+    }
+
+    .left-header .robot-stage {
+      width: 70%;
+    }
+  }
+
+  .scroll-down {
+    display: none;
+  }
+
+  // ----- About -----
+  .about-container .right-about {
+    gap: 1rem;
+
+    .about-item .abt-text {
+      padding: 1rem;
+
+      .large-text {
+        font-size: 1.8rem;
+      }
+
+      .small-text {
+        padding-left: 0;
+        font-size: 0.75rem;
+
+        &::before {
+          display: none;           // hide the little line to save space
+        }
+      }
+    }
+  }
+
+  // everything that was 2–3 columns → 1 column
+  .about-skills .skill-rows,
+  .timeline-wrap,
+  .portfolios,
+  .blog-grid,
+  .contact-content-con .contact-form .input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-wrap {
+    gap: 3rem;
+  }
+
+  // ----- Projects: filter buttons a bit smaller -----
+  .port-filters .filter-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.9rem;
+  }
+
+  // ----- Contact -----
+  .contact-content-con {
+    .left-contact h4 {
+      font-size: 1.6rem;
+    }
+
+    .right-contact {
+      padding: 1.5rem;
+    }
+  }
+
+  // ----- Navigation: side buttons → bottom bar -----
+  .controls {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    transform: none;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.6rem 0;
+    background-color: var(--color-grey-6);
+    border-top: 1px solid var(--color-grey-5);
+
+    .control {
+      width: 45px;
+      height: 45px;
+      margin: 0;
+      padding: 0;
+
+      // phones can't hover, so hide the slide-out labels
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

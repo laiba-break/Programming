@@ -21,7 +21,7 @@
 <!-- The body is everything visible on the page -->
 <body class="main-content">
 
-    <!-- HOME -->
+    <!-- ==================== HOME ==================== -->
     <header class="section sec1 header visible" id="home">
         <div class="header-content">
             <div class="left-header">
@@ -73,52 +73,71 @@
     </header>
 
     <main>
-        <!-- ABOUT -->
+        <!-- ==================== ABOUT ==================== -->
         <section class="section sec2 about" id="about">
             <div class="main-title">
                 <p class="section-label">// 01 — About</p>
                 <h2>About <span>me</span><span class="bg-text">profile</span></h2>
             </div>
 
+            <!-- Bio + fact cards -->
             <div class="about-container">
                 <div class="left-about">
                     <div class="about-photo">
                         <img src="images/photo.png" alt="Photo of Laiba Memon">
                     </div>
-                    <h4>Information About Me</h4>
+                    <h4>Who I am</h4>
                     <p>
-                        [3–4 sentences: your mechanical engineering background, what you're
-                        studying now in mechatronics, and the kind of robotics / controls /
-                        smart systems work you want to do.]
+                        [Where you come from: your mechanical engineering background and
+                        what you enjoyed most about it.]
                     </p>
+                    <p>
+                        [What you're doing now: your mechatronics studies and the topics
+                        you focus on, like robotics, control engineering and smart systems.]
+                    </p>
+
+                    <div class="looking-for">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p><span>Currently looking for:</span> [internships / working student roles / thesis
+                        positions] in robotics and control engineering.</p>
+                    </div>
+
                     <div class="btn-con">
                         <a href="files/Laiba-Memon-CV.pdf" class="main-btn" download>
                             <span class="btn-text">Download CV</span>
                             <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                        </a>
+                        <a href="#contact" class="main-btn">
+                            <span class="btn-text">Contact me</span>
+                            <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
                         </a>
                     </div>
                 </div>
 
                 <div class="right-about">
                     <div class="about-item">
+                        <i class="fa-solid fa-gear card-icon"></i>
                         <div class="abt-text">
                             <p class="large-text">B.Sc.</p>
                             <p class="small-text">Mechanical<br>Engineering</p>
                         </div>
                     </div>
                     <div class="about-item">
+                        <i class="fa-solid fa-microchip card-icon"></i>
                         <div class="abt-text">
                             <p class="large-text">[M.Sc.]</p>
                             <p class="small-text">Mechatronics<br>[in progress]</p>
                         </div>
                     </div>
                     <div class="about-item">
+                        <i class="fa-solid fa-screwdriver-wrench card-icon"></i>
                         <div class="abt-text">
                             <p class="large-text">[X]+</p>
                             <p class="small-text">Engineering<br>Projects</p>
                         </div>
                     </div>
                     <div class="about-item">
+                        <i class="fa-solid fa-language card-icon"></i>
                         <div class="abt-text">
                             <p class="large-text">[X]</p>
                             <p class="small-text">Languages<br>Spoken</p>
@@ -126,73 +145,476 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Skill bars -->
-            <div class="about-profile">
-                <h4 class="profile-title">My Skills</h4>
-                <div class="progress-bars">
-
-                    <div class="progress-bar">
-                        <p class="prog-title">MATLAB / Simulink</p>
-                        <div class="progress-con">
-                            <p class="prog-text">85%</p>
-                            <div class="progress"><span style="width: 85%"></span></div>
-                        </div>
+            <!-- Skills & tools (compact) -->
+            <div class="about-skills">
+                <h4 class="timeline-title"><i class="fa-solid fa-gears"></i> Skills &amp; Tools</h4>
+                <div class="skill-rows">
+                    <div class="skill-row">
+                        <p class="skill-cat"><i class="fa-solid fa-gear"></i> Mechanical</p>
+                        <ul class="skill-list">
+                            <li>SolidWorks</li>
+                            <li>[FEM]</li>
+                            <li>[Technical drawing]</li>
+                        </ul>
                     </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">CAD (SolidWorks)</p>
-                        <div class="progress-con">
-                            <p class="prog-text">80%</p>
-                            <div class="progress"><span style="width: 80%"></span></div>
-                        </div>
+                    <div class="skill-row">
+                        <p class="skill-cat"><i class="fa-solid fa-sliders"></i> Control &amp; Simulation</p>
+                        <ul class="skill-list">
+                            <li>MATLAB</li>
+                            <li>Simulink</li>
+                            <li>[PID / State-space]</li>
+                        </ul>
                     </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Python</p>
-                        <div class="progress-con">
-                            <p class="prog-text">70%</p>
-                            <div class="progress"><span style="width: 70%"></span></div>
-                        </div>
+                    <div class="skill-row">
+                        <p class="skill-cat"><i class="fa-solid fa-microchip"></i> Electronics &amp; Embedded</p>
+                        <ul class="skill-list">
+                            <li>Arduino</li>
+                            <li>[Sensors]</li>
+                            <li>[C]</li>
+                        </ul>
                     </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Arduino / Embedded C</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress"><span style="width: 75%"></span></div>
-                        </div>
+                    <div class="skill-row">
+                        <p class="skill-cat"><i class="fa-solid fa-code"></i> Software</p>
+                        <ul class="skill-list">
+                            <li>Python</li>
+                            <li>Git</li>
+                            <li>HTML / CSS / JS</li>
+                        </ul>
                     </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Control Systems</p>
-                        <div class="progress-con">
-                            <p class="prog-text">80%</p>
-                            <div class="progress"><span style="width: 80%"></span></div>
-                        </div>
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">HTML / CSS / JS</p>
-                        <div class="progress-con">
-                            <p class="prog-text">60%</p>
-                            <div class="progress"><span style="width: 60%"></span></div>
-                        </div>
-                    </div>
-
                 </div>
+            </div>
+
+            <!-- Timeline: Education | Experience -->
+            <div class="timeline-wrap">
+
+                <div class="timeline-col">
+                    <h4 class="timeline-title"><i class="fa-solid fa-graduation-cap"></i> Education</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <p class="tl-duration">[2024 – present]</p>
+                            <h5>M.Sc. Mechatronics<span>[University name]</span></h5>
+                            <p>[Focus areas, e.g. robotics, control engineering, embedded systems.]</p>
+                        </div>
+                        <div class="timeline-item">
+                            <p class="tl-duration">[2019 – 2023]</p>
+                            <h5>B.Sc. Mechanical Engineering<span>[University name]</span></h5>
+                            <p>[Main subjects and your thesis topic, in 1–2 sentences.]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-col">
+                    <h4 class="timeline-title"><i class="fa-solid fa-briefcase"></i> Experience</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <p class="tl-duration">[Year – Year]</p>
+                            <h5>[Job / internship title]<span>[Company]</span></h5>
+                            <p>[What you did and the result, e.g. "Designed a PID controller that reduced settling time by 30%."]</p>
+                        </div>
+                        <div class="timeline-item">
+                            <p class="tl-duration">[Year – Year]</p>
+                            <h5>[Student project / team / job]<span>[Company or university]</span></h5>
+                            <p>[What you did and the result, in 1–2 sentences.]</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- PROJECTS -->
-        <section class="section sec3 portfolio" id="portfolio"></section>
+                <!-- ==================== PROJECTS ==================== -->
+        <section class="section sec3 portfolio" id="portfolio">
+            <div class="main-title">
+                <p class="section-label">// 02 — Projects</p>
+                <h2>My <span>projects</span><span class="bg-text">builds</span></h2>
+            </div>
 
-        <!-- SKILLS -->
-        <section class="section sec4 skills" id="skills"></section>
+            <p class="port-text">
+                A selection of engineering projects I've designed, built and tested.
+            </p>
 
-        <!-- CONTACT -->
-        <section class="section sec5 contact" id="contact"></section>
-    </main>
+            <!-- Filter buttons: data-filter must match the words in each card's data-category -->
+            <div class="port-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="robotics">Robotics</button>
+                <button class="filter-btn" data-filter="control">Control</button>
+                <button class="filter-btn" data-filter="embedded">Embedded</button>
+                <button class="filter-btn" data-filter="mechanical">Mechanical / CAD</button>
+            </div>
+
+            <div class="portfolios">
+
+                <!-- Project 1 (put your best 3 projects first) -->
+                <div class="portfolio-item" data-category="robotics embedded">
+                    <a href="#" class="image">  <!-- replace # with a project link -->
+                        <img src="images/test.jfif" alt="[Short description of project 1 image]">
+                        <div class="img-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View project</span>
+                        </div>
+                    </a>
+                    <div class="port-body">
+                        <h3>[Project title, e.g. 2-DOF Robot Arm]</h3>
+                        <p>[One or two sentences: what it does, what you did, and the result.]</p>
+                        <ul class="port-tags">
+                            <li>[SolidWorks]</li>
+                            <li>[Arduino]</li>
+                            <li>[C++]</li>
+                        </ul>
+                        <div class="icons">
+                            <a href="https://github.com/[your-username]/[repo]" target="_blank" class="icon" aria-label="Code on GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://youtube.com/[video-link]" target="_blank" class="icon" aria-label="Demo video">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="control">
+                    <a href="#" class="image">
+                        <img src="images/test.jfif" alt="[Short description of project 2 image]">
+                        <div class="img-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View project</span>
+                        </div>
+                    </a>
+                    <div class="port-body">
+                        <h3>[Project title, e.g. PID Motor Speed Control]</h3>
+                        <p>[One or two sentences: what it does, what you did, and the result.]</p>
+                        <ul class="port-tags">
+                            <li>[MATLAB]</li>
+                            <li>[Simulink]</li>
+                        </ul>
+                        <div class="icons">
+                            <a href="https://github.com/[your-username]/[repo]" target="_blank" class="icon" aria-label="Code on GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="embedded">
+                    <a href="#" class="image">
+                        <img src="images/test.jfif" alt="[Short description of project 3 image]">
+                        <div class="img-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View project</span>
+                        </div>
+                    </a>
+                    <div class="port-body">
+                        <h3>[Project title, e.g. Smart Sensor Node]</h3>
+                        <p>[One or two sentences: what it does, what you did, and the result.]</p>
+                        <ul class="port-tags">
+                            <li>[ESP32]</li>
+                            <li>[Python]</li>
+                            <li>[Sensors]</li>
+                        </ul>
+                        <div class="icons">
+                            <a href="https://github.com/[your-username]/[repo]" target="_blank" class="icon" aria-label="Code on GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 (hidden until "Show more") -->
+                <div class="portfolio-item" data-category="mechanical">
+                    <a href="#" class="image">
+                        <img src="images/test.jfif" alt="[Short description of project 4 image]">
+                        <div class="img-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View project</span>
+                        </div>
+                    </a>
+                    <div class="port-body">
+                        <h3>[Project title, e.g. Gearbox Design]</h3>
+                        <p>[One or two sentences: what it does, what you did, and the result.]</p>
+                        <ul class="port-tags">
+                            <li>[SolidWorks]</li>
+                            <li>[FEM]</li>
+                        </ul>
+                        <div class="icons">
+                            <a href="https://github.com/[your-username]/[repo]" target="_blank" class="icon" aria-label="Code on GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item" data-category="robotics">
+                    <a href="#" class="image">
+                        <img src="images/test.jfif" alt="[Short description of project 5 image]">
+                        <div class="img-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View project</span>
+                        </div>
+                    </a>
+                    <div class="port-body">
+                        <h3>[Project title, e.g. ROS 2 Mobile Robot]</h3>
+                        <p>[One or two sentences: what it does, what you did, and the result.]</p>
+                        <ul class="port-tags">
+                            <li>[ROS 2]</li>
+                            <li>[Python]</li>
+                        </ul>
+                        <div class="icons">
+                            <a href="https://github.com/[your-username]/[repo]" target="_blank" class="icon" aria-label="Code on GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item" data-category="control robotics">
+                    <a href="#" class="image">
+                        <img src="images/test.jfif" alt="[Short description of project 6 image]">
+                        <div class="img-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View project</span>
+                        </div>
+                    </a>
+                    <div class="port-body">
+                        <h3>[Project title, e.g. Inverted Pendulum Controller]</h3>
+                        <p>[One or two sentences: what it does, what you did, and the result.]</p>
+                        <ul class="port-tags">
+                            <li>[MATLAB]</li>
+                            <li>[State-space]</li>
+                        </ul>
+                        <div class="icons">
+                            <a href="https://github.com/[your-username]/[repo]" target="_blank" class="icon" aria-label="Code on GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Show more / show less -->
+            <div class="port-more">
+                <button class="main-btn" id="show-more">
+                    <span class="btn-text">Show more projects</span>
+                    <span class="btn-icon"><i class="fa-solid fa-arrow-down"></i></span>
+                </button>
+            </div>
+        </section>
+                <!-- ==================== BLOG ==================== -->
+        <section class="section sec4 blog" id="blog">
+            <div class="main-title">
+                <p class="section-label">// 03 — Blog</p>
+                <h2>My <span>blogs</span><span class="bg-text">notes</span></h2>
+            </div>
+
+            <p class="port-text">
+                Build logs, study notes and things I've learned along the way.
+            </p>
+
+            <div class="blog-grid">
+
+                <article class="blog-card">
+                    <div class="blog-cover"><i class="fa-solid fa-language"></i></div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Learning</span>
+                            <span>[Month Year] · [5] min read</span>
+                        </div>
+                        <h3>How I learned German as an engineering student</h3>
+                        <p>[1–2 sentence summary of the post.]</p>
+                        <a href="blog/learning-german.html" class="read-more">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-cover"><i class="fa-solid fa-robot"></i></div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Build log</span>
+                            <span>[Month Year] · [8] min read</span>
+                        </div>
+                        <h3>[Building my 2-DOF robot arm, step by step]</h3>
+                        <p>[1–2 sentence summary: what you built, what went wrong, what you learned.]</p>
+                        <a href="blog/robot-arm-build.html" class="read-more">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-cover"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Study notes</span>
+                            <span>[Month Year] · [6] min read</span>
+                        </div>
+                        <h3>[The resources that helped me understand control theory]</h3>
+                        <p>[1–2 sentence summary of the post.]</p>
+                        <a href="blog/control-theory-resources.html" class="read-more">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                                <article class="blog-card">
+                    <div class="blog-cover"><i class="fa-solid fa-wave-square"></i></div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Study notes</span>
+                            <span>[Month Year] · [7] min read</span>
+                        </div>
+                        <h3>[PID control explained simply]</h3>
+                        <p>[1–2 sentence summary of the post.]</p>
+                        <a href="blog/pid-explained.html" class="read-more">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-cover"><i class="fa-solid fa-diagram-project"></i></div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Study notes</span>
+                            <span>[Month Year] · [6] min read</span>
+                        </div>
+                        <h3>[Forward vs inverse kinematics]</h3>
+                        <p>[1–2 sentence summary of the post.]</p>
+                        <a href="blog/kinematics.html" class="read-more">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-cover"><i class="fa-solid fa-route"></i></div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Student life</span>
+                            <span>[Month Year] · [5] min read</span>
+                        </div>
+                        <h3>[From mechanical to mechatronics: what I wish I knew]</h3>
+                        <p>[1–2 sentence summary of the post.]</p>
+                        <a href="blog/mech-to-mechatronics.html" class="read-more">
+                            Read more <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+                        <!-- Show more / show less -->
+            <div class="port-more">
+                <button class="main-btn" id="blog-more">
+                    <span class="btn-text">Show more articles</span>
+                    <span class="btn-icon"><i class="fa-solid fa-arrow-down"></i></span>
+                </button>
+            </div>
+        </section>
+                <!-- ==================== CONTACT ==================== -->
+        <section class="section sec5 contact" id="contact">
+            <div class="main-title">
+                <p class="section-label">// 04 — Contact</p>
+                <h2>Contact <span>me</span><span class="bg-text">connect</span></h2>
+            </div>
+
+            <div class="contact-content-con">
+
+                <!-- Left: headline, direct contact, details, socials -->
+                <div class="left-contact">
+                    <p class="contact-eyebrow">&gt; open a connection_</p>
+                    <h4>Got a system that needs to <span>move</span>, <span>sense</span> or <span>think</span>?</h4>
+                    <p>
+                        Whether it's an internship, a thesis, a project idea or just a question
+                        about robotics, I'd love to hear from you. I usually reply within a day or two.
+                    </p>
+
+                    <!-- Direct email button -->
+                    <div class="btn-con contact-actions">
+                        <a href="mailto:[your.email@example.com]" class="main-btn">
+                            <span class="btn-text">Email me directly</span>
+                            <span class="btn-icon"><i class="fa-solid fa-envelope"></i></span>
+                        </a>
+                    </div>
+
+                    <!-- Contact details -->
+                    <div class="contact-info">
+                        <a href="mailto:[your.email@example.com]" class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <p class="contact-value">[your.email@example.com]</p>
+                            </div>
+                        </a>
+
+                        <a href="tel:+49[your-number]" class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <p class="contact-label">Phone</p>
+                                <p class="contact-value">+49 [your number]</p>
+                            </div>
+                        </a>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <p class="contact-label">Location</p>
+                                <p class="contact-value">Rosenheim · Munich, Germany</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social links -->
+                    <div class="social-links">
+                        <a href="https://github.com/[your-username]" target="_blank" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/[your-profile]" target="_blank" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: message form (replace the action link with your Formspree link) -->
+                <div class="right-contact">
+                    <h5 class="form-title"><i class="fa-solid fa-comment-dots"></i> Send me a message</h5>
+                    <form action="https://formspree.io/f/[your-form-id]" method="POST" class="contact-form">
+                        <div class="input-row">
+                            <div class="input-control">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="input-control">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your email" required>
+                            </div>
+                        </div>
+                        <div class="input-control">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter subject">
+                        </div>
+                        <div class="input-control">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="main-btn">
+                            <span class="btn-text">Send message</span>
+                            <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="site-footer">
+                <p>© 2026 Laiba Memon · Built from scratch with HTML, SCSS &amp; JavaScript</p>
+            </footer>
+        </section>
+
+            </main>
 
     <!-- Navigation buttons (data-title = hover label) -->
     <div class="controls">
@@ -205,8 +627,8 @@
         <div class="control control-3" data-id="portfolio" data-title="Projects">
             <i class="fa-solid fa-robot"></i>
         </div>
-        <div class="control control-4" data-id="skills" data-title="Skills">
-            <i class="fa-solid fa-gears"></i>
+        <div class="control control-4" data-id="blog" data-title="Blog">
+            <i class="fa-solid fa-pen-nib"></i>
         </div>
         <div class="control control-5" data-id="contact" data-title="Contact">
             <i class="fa-solid fa-paper-plane"></i>
