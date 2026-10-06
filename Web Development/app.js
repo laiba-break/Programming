@@ -1,24 +1,29 @@
 const sections = document.querySelectorAll(".section");
-const sectBtns = document.querySelectorAll(".control");
-const allSections = document.querySelector(".main-content");
+const navBtns = document.querySelectorAll(".control");
 
-function pageTransitions() {
-  // 1. Highlight the clicked button
-  sectBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document.querySelector(".active-btn").classList.remove("active-btn");
-      btn.classList.add("active-btn");
-    });
+// 1. Click a button → smoothly scroll to its section
+navBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const target = document.getElementById(btn.dataset.id);
+    target.scrollIntoView({ behavior: "smooth" });
   });
+});
 
-  allSections.addEventListener("click", (e) => {
-    const id = e.target.dataset.id;
-    if (id) {
-      sections.forEach((section) => section.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
-    }
-  })
+// 2. While scrolling → fade in sections and highlight the matching button
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
 
-}
+        navBtns.forEach((btn) => {
+          btn.classList.toggle("active-btn", btn.dataset.id === entry.target.id);
+        });
+      }
+    });
+  },
+  // a section counts as "current" when it crosses the middle of the screen
+  { rootMargin: "-45% 0px -50% 0px" }
+);
 
-pageTransitions();
+sections.forEach((section) => observer.observe(section));

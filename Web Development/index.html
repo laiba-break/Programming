@@ -1,53 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Stores info about the pages none of it will actual come on the page--->
-    <meta charset="UTF-8"> <!--lets page display any charatcer ---> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--makes sit scale properly on the phone. Without this only tiny not so
-    optmized page will be shown -->
-    <title>Laiba Memon | Portfolio</title>  <!--This is title on browser tab-->
-    <link rel="stylesheet" href="style/style.css">
-    <!--This line connects my css*/
-    Below copied the code from google for poppins u can do it for any/*
-    This will help u change ur portfolio as u wish-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Info about the page; none of it shows on the page itself -->
+    <meta charset="UTF-8"> <!-- lets the page display any character -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- scales properly on phones -->
+    <title>Laiba Memon | Portfolio</title> <!-- text on the browser tab -->
+
+    <!-- Fonts: Poppins + JetBrains Mono from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome: icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- My styles (last, so they override everything above) -->
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<!--The body is everything visible on the page-->
+
+<!-- The body is everything visible on the page -->
 <body class="main-content">
-    <header class = "section sec1 header active" id="home">
-<!--This is top or home section-->
- <h1>Hi, I'm <span class="highlight">Laiba Memon</span></h1>
- <p class="subtitle">[Aspiring Web Developer]</p>
- <p>[One sentence about what you do or want to do.]</p>
+
+    <!-- HOME -->
+    <header class="section sec1 header visible" id="home">
+        <div class="header-content">
+            <div class="left-header">
+                <div class="robot-stage">
+                    <svg class="robot-arm" viewBox="0 0 200 200" aria-hidden="true">
+                        <rect class="base" x="65" y="170" width="70" height="18" rx="4"/>
+                        <g class="arm-1">
+                            <rect class="link" x="93" y="100" width="14" height="70" rx="7"/>
+                            <g class="arm-2">
+                                <rect class="link" x="94" y="42" width="12" height="60" rx="6"/>
+                                <g class="gripper">
+                                    <rect class="finger finger-l" x="88" y="22" width="5" height="18" rx="2"/>
+                                    <rect class="finger finger-r" x="107" y="22" width="5" height="18" rx="2"/>
+                                    <circle class="joint" cx="100" cy="42" r="7"/>
+                                </g>
+                                <circle class="joint" cx="100" cy="100" r="9"/>
+                            </g>
+                            <circle class="joint" cx="100" cy="170" r="11"/>
+                        </g>
+                        <circle class="led" cx="78" cy="179" r="3"/>
+                    </svg>
+                    <p class="robot-caption">&gt; system online · welcome<span class="cursor">_</span></p>
+                </div>
+            </div>
+
+            <div class="right-header">
+                <p class="eyebrow">Robotics · Control Systems · Smart Systems</p>
+                <h1 class="name">Hi, I'm <span>Laiba Memon</span></h1>
+                <h2 class="role">Mechanical Engineer · Mechatronics Student</h2>
+                <p class="intro">
+                    I design and build systems where mechanics, electronics and code meet.
+                    Currently focused on robotics and control engineering.
+                </p>
+                <ul class="tags">
+                    <li>MATLAB / Simulink</li>
+                    <li>CAD</li>
+                    <li>Python</li>
+                    <li>Arduino</li>
+                </ul>
+                <div class="btn-con">
+                    <a href="files/Laiba-Memon-CV.pdf" class="main-btn" download>
+                        <span class="btn-text">Download CV</span>
+                        <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Scroll down"><span></span></a>
     </header>
+
     <main>
-    <section class="section sec2 about" id="about"></section>
-   <section class="section sec3 portfolio" id="portfolio"></section>
-   <section class="section sec4 blogs" id="blogs"></section>
-   <section class="section sec5 contact" id="contact"></section>
+        <!-- ABOUT -->
+        <section class="section sec2 about" id="about">
+            <div class="main-title">
+                <p class="section-label">// 01 — About</p>
+                <h2>About <span>me</span><span class="bg-text">profile</span></h2>
+            </div>
+
+            <div class="about-container">
+                <div class="left-about">
+                    <div class="about-photo">
+                        <img src="images/photo.png" alt="Photo of Laiba Memon">
+                    </div>
+                    <h4>Information About Me</h4>
+                    <p>
+                        [3–4 sentences: your mechanical engineering background, what you're
+                        studying now in mechatronics, and the kind of robotics / controls /
+                        smart systems work you want to do.]
+                    </p>
+                    <div class="btn-con">
+                        <a href="files/Laiba-Memon-CV.pdf" class="main-btn" download>
+                            <span class="btn-text">Download CV</span>
+                            <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="right-about">
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">B.Sc.</p>
+                            <p class="small-text">Mechanical<br>Engineering</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">[M.Sc.]</p>
+                            <p class="small-text">Mechatronics<br>[in progress]</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">[X]+</p>
+                            <p class="small-text">Engineering<br>Projects</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">[X]</p>
+                            <p class="small-text">Languages<br>Spoken</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill bars -->
+            <div class="about-profile">
+                <h4 class="profile-title">My Skills</h4>
+                <div class="progress-bars">
+
+                    <div class="progress-bar">
+                        <p class="prog-title">MATLAB / Simulink</p>
+                        <div class="progress-con">
+                            <p class="prog-text">85%</p>
+                            <div class="progress"><span style="width: 85%"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <p class="prog-title">CAD (SolidWorks)</p>
+                        <div class="progress-con">
+                            <p class="prog-text">80%</p>
+                            <div class="progress"><span style="width: 80%"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <p class="prog-title">Python</p>
+                        <div class="progress-con">
+                            <p class="prog-text">70%</p>
+                            <div class="progress"><span style="width: 70%"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <p class="prog-title">Arduino / Embedded C</p>
+                        <div class="progress-con">
+                            <p class="prog-text">75%</p>
+                            <div class="progress"><span style="width: 75%"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <p class="prog-title">Control Systems</p>
+                        <div class="progress-con">
+                            <p class="prog-text">80%</p>
+                            <div class="progress"><span style="width: 80%"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <p class="prog-title">HTML / CSS / JS</p>
+                        <div class="progress-con">
+                            <p class="prog-text">60%</p>
+                            <div class="progress"><span style="width: 60%"></span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section sec3 portfolio" id="portfolio"></section>
+
+        <!-- SKILLS -->
+        <section class="section sec4 skills" id="skills"></section>
+
+        <!-- CONTACT -->
+        <section class="section sec5 contact" id="contact"></section>
     </main>
+
+    <!-- Navigation buttons (data-title = hover label) -->
     <div class="controls">
-    <div class="control control-1 active-btn" data-id="about">
-        <i class="fa-solid fa-house"></i>
+        <div class="control control-1 active-btn" data-id="home" data-title="Home">
+            <i class="fa-solid fa-house"></i>
+        </div>
+        <div class="control control-2" data-id="about" data-title="About me">
+            <i class="fa-solid fa-user-gear"></i>
+        </div>
+        <div class="control control-3" data-id="portfolio" data-title="Projects">
+            <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="control control-4" data-id="skills" data-title="Skills">
+            <i class="fa-solid fa-gears"></i>
+        </div>
+        <div class="control control-5" data-id="contact" data-title="Contact">
+            <i class="fa-solid fa-paper-plane"></i>
+        </div>
     </div>
-    <div class="control control-2" data-id="about">
-        <i class="fa-solid fa-user"></i>
-    </div>
-    <div class="control control-3" data-id="portfolio">
-        <i class="fa-solid fa-briefcase"></i>
-    </div>
-    <div class="control control-4" data-id="blogs">
-        <i class="fa-solid fa-blog"></i>
-    </div>
-    <div class="control control-5" data-id="contact">
-        <i class="fa-solid fa-envelope"></i>
-    </div>
-</div>
-<script src="app.js"></script>
-</body> 
+
+    <script src="app.js"></script>
+</body>
 </html>
